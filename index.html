@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editkaro.in — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="logo">Editkaro<span>.in</span></a>
+      <button class="hamburger" aria-label="Open Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#work">Portfolio</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a class="btn btn--sm" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO WITH BACKGROUND VIDEO ===== -->
+  <section id="hero" class="hero">
+    <video class="hero__bg" autoplay muted loop playsinline>
+      <!-- Replace with your reel/intro BG -->
+      <source src="assets/videos/hero-reel.mp4" type="video/mp4" />
+    </video>
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <h1 class="hero__title reveal">We Craft <span>Thumb-Stopping</span> Videos</h1>
+      <p class="hero__subtitle reveal delay-1">
+        Short-form, long-form, ads, gaming, football, eCom & more — sab ek hi chhat ke neeche.
+      </p>
+      <div class="hero__cta reveal delay-2">
+        <a href="#work" class="btn">Explore Work</a>
+        <a href="#contact" class="btn btn--ghost">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORIES FILTER BAR ===== -->
+  <section id="work" class="section container">
+    <div class="section__head">
+      <h2 class="section__title">Featured Portfolio</h2>
+      <p class="section__desc">Browse by category or dekh lo sab ek sath 🙂</p>
+    </div>
+
+    <div class="filters">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="short">Short</button>
+      <button class="chip" data-filter="long">Long</button>
+      <button class="chip" data-filter="gaming">Gaming</button>
+      <button class="chip" data-filter="football">Football</button>
+      <button class="chip" data-filter="ads">Ads</button>
+      <button class="chip" data-filter="anime">Anime</button>
+      <button class="chip" data-filter="color">Color Grading</button>
+      <button class="chip" data-filter="docu">Documentary</button>
+      <button class="chip" data-filter="ecom">eCommerce</button>
+    </div>
+
+    <!-- ===== IMAGE/THUMB GALLERY (HOVER ANIMS + TILT) ===== -->
+    <div class="masonry" id="gallery">
+      <!-- Replace thumbnails with your images. data-cat controls filtering -->
+      <article class="card reveal" data-cat="short">
+        <div class="card__media tilt">
+          <img src="assets/images/short-1.jpg" alt="Short edit 1"/>
+          <div class="card__overlay">
+            <h3>Short Edit</h3>
+            <p>High-energy transitions</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="long">
+        <div class="card__media tilt">
+          <img src="assets/images/long-1.jpg" alt="Long edit 1"/>
+          <div class="card__overlay">
+            <h3>Long Edit</h3>
+            <p>Story-led pacing</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="gaming">
+        <div class="card__media tilt">
+          <img src="assets/images/gaming-1.jpg" alt="Gaming edit 1"/>
+          <div class="card__overlay">
+            <h3>Gaming Edit</h3>
+            <p>Montage + SFX</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="football">
+        <div class="card__media tilt">
+          <img src="assets/images/football-1.jpg" alt="Football edit 1"/>
+          <div class="card__overlay">
+            <h3>Football Edit</h3>
+            <p>Dynamic sports cuts</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="ads ecom">
+        <div class="card__media tilt">
+          <img src="assets/images/ecom-1.jpg" alt="eCommerce ad 1"/>
+          <div class="card__overlay">
+            <h3>eCommerce Ad</h3>
+            <p>Conversion-focused</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="anime color">
+        <div class="card__media tilt">
+          <img src="assets/images/anime-1.jpg" alt="Anime edit 1"/>
+          <div class="card__overlay">
+            <h3>Anime Edit</h3>
+            <p>Sync + Color pass</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="docu">
+        <div class="card__media tilt">
+          <img src="assets/images/docu-1.jpg" alt="Documentary style 1"/>
+          <div class="card__overlay">
+            <h3>Documentary</h3>
+            <p>Authentic narrative</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Add more cards similarly -->
+    </div>
+  </section>
+
+  <!-- ===== RUNNING VIDEOS SECTION (AUTOPLAY) ===== -->
+  <section id="videos" class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Watch Our Videos</h2>
+        <p class="section__desc">Real work, real motion — niche-niche categories me chalti hui clips.</p>
+      </div>
+
+      <div class="video-rail">
+        <!-- Replace sources with your files -->
+        <figure class="vcard reveal">
+          <video src="assets/videos/short-edit-1.mp4" autoplay muted loop playsinline></video>
+          <figcaption>Short Edit Reel</figcaption>
+        </figure>
+        <figure class="vcard reveal">
+          <video src="assets/videos/gaming-edit-1.mp4" autoplay muted loop playsinline></video>
+          <figcaption>Gaming Montage</figcaption>
+        </figure>
+        <figure class="vcard reveal">
+          <video src="assets/videos/ecom-ad-1.mp4" autoplay muted loop playsinline></video>
+          <figcaption>eCommerce Ad</figcaption>
+        </figure>
+        <figure class="vcard reveal">
+          <video src="assets/videos/football-edit-1.mp4" autoplay muted loop playsinline></video>
+          <figcaption>Football Edit</figcaption>
+        </figure>
+      </div>
+
+      <div class="center">
+        <button class="btn" data-open="#lightbox" data-video="assets/videos/showreel.mp4">Play Showreel</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section container">
+    <div class="about">
+      <div class="about__text reveal">
+        <h2>About Editkaro.in</h2>
+        <p>
+          Hum ek social media marketing & video editing agency hain jisme creativity + strategy milti hai.
+          Reels se leke documentary tak, har format me crisp storytelling aur color science pe focus.
+        </p>
+        <ul class="ticks">
+          <li>Platform-optimized edits (YT, IG, FB, TT)</li>
+          <li>Fast turnarounds with quality control</li>
+          <li>Brand-safe, data-backed storytelling</li>
+        </ul>
+        <a href="#contact" class="btn">Let’s Collaborate</a>
+      </div>
+      <div class="about__media reveal">
+        <img src="assets/images/about-side.jpg" alt="Studio / Edit setup"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Contact Us</h2>
+        <p class="section__desc">Project brief bhejo, hum concept se deliverable tak sab sambhaal lenge.</p>
+      </div>
+      <form class="form reveal" onsubmit="return handleContact(event)">
+        <div class="grid-2">
+          <input type="text" name="name" placeholder="Your Name" required/>
+          <input type="email" name="email" placeholder="Your Email" required/>
+        </div>
+        <input type="text" name="subject" placeholder="Project Type / Budget (optional)"/>
+        <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+        <p class="form__msg" id="formMsg" role="alert"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== LIGHTBOX (IMAGE/VIDEO) ===== -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox__inner">
+      <button class="lightbox__close" aria-label="Close">&times;</button>
+      <img class="lightbox__img" alt="" />
+      <video class="lightbox__video" controls playsinline></video>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__in">
+      <p>© 2025 Editkaro.in • Crafted with ❤️</p>
+      <a href="#hero" class="to-top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+    
